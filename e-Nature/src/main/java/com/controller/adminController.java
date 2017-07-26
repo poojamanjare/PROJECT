@@ -1,0 +1,49 @@
+package com.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.bytebuddy.asm.Advice.Return;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.daoImpl.CategoryDaoImpl;
+import com.daoImpl.UserDaoImpl;
+import com.model.Category;
+import com.model.User;
+
+@Controller
+public class adminController 
+{
+	@Autowired
+	CategoryDaoImpl categoryDaoImpl;
+	
+	@RequestMapping(value="/saveCat",method=RequestMethod.POST)
+	public ModelAndView saveCategory(@RequestParam("cid")int cid,@RequestParam("name")String name)
+	{
+		ModelAndView mav=new ModelAndView();
+		Category c=new Category();
+		c.setCid(cid);
+		c.setName(name);
+		categoryDaoImpl.insertCategory(c);
+		mav.setViewName("index");
+		return mav;
+	}
+	
+	@RequestMapping("/adding")
+	public String addPage()
+	{
+		return "adding";
+	}
+	
+
+}

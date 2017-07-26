@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Jul 25 10:52:31 IST 2017
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\pooja\\.m2\\repository\\org\\springframework\\spring-web\\4.3.8.RELEASE\\spring-web-4.3.8.RELEASE.jar=WEB-INF/lib/spring-web-4.3.8.RELEASE.jar
+org.eclipse.jst.j2ee.server\:e-NatureBackEnd=WEB-INF/lib/e-NatureBackEnd-0.0.1-SNAPSHOT.jar

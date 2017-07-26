@@ -1,0 +1,21 @@
+package com.model;
+
+import java.io.Serializable;
+import java.util.*;
+import javax.persistence.*;
+import javax.validation.*;
+
+@Entity
+@Table (name="Category")
+public class Category 
+{
+	@Id
+	private int cid;
+	private String name;
+	
+	@OneToMany(targetEntity=Product.class,fetch=FetchType.EAGAR,mappedBy=("category"))
+	private set<Product>products=new HashSet<Product>(0);
+	
+	
+
+}

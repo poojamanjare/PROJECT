@@ -1,0 +1,18 @@
+1500281143316	Move 'index.jsp' to 'views'
+1500350443813	Move 'dispatcher-servlet.xml' to 'WEB-INF'
+1500370360248	Move 'images' to 'WEB-INF'
+1500370374086	Move 'carousel.css' to 'views'
+1500370386245	Move 'social-icon.css' to 'views'
+1500370407696	Move 'login.jsp' to 'views'
+1500370410785	Move 'register.jsp' to 'views'
+1500370550619	Delete element
+1500370561033	Delete element
+1500436094706	Move 'images' to 'views'
+1500440006788	Move 'images' to 'WEB-INF'
+1500449136123	Move 'images' to 'webapp'
+1500452777819	Delete elements
+1500453820448	Move 'images' to 'stuff'
+1500453852802	Move 'carousel.css' to 'css-file'
+1500453856690	Move 'login.css' to 'css-file'
+1500453859935	Move 'social-icon.css' to 'css-file'
+1500455920601	Rename resource 'stuff'

@@ -1,0 +1,36 @@
+package com.daoImpl;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+import com.dao.CategoryDao;
+import com.dao.UserDao;
+import com.model.Category;
+import com.model.User;
+
+@SuppressWarnings("unused")
+
+@Repository
+@Service
+public class CategoryDaoImpl implements CategoryDao
+{
+	@Autowired
+	SessionFactory sessionFactory;
+	
+	public CategoryDaoImpl(SessionFactory sessionFactory)
+	{
+		this.sessionFactory=sessionFactory;
+	}
+	
+	public void insertCategory(Category category)
+	{
+		Session session=sessionFactory.openSession();
+		session.beginTransaction();
+		session.saveOrUpdate(category);
+		session.getTransaction().commit();
+	}
+
+}
